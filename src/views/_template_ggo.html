@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salesforce Lightning Design System Starter Kit</title>
+  <title>G4SFDC Prototyping</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/png" href="/favicon.png" />
 
@@ -362,9 +362,10 @@
                 <span class="slds-truncate" title="Galigeo Map">Galigeo Map</span>
               </a>
             </li>
+            <!--
             <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
               <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
-                <span class="slds-truncate" title="Menu Item">Groups</span>
+                <span class="slds-truncate" title="Menu Item">Other Stuffs</span>
               </a>
               <div class="slds-context-bar__icon-action slds-p-left_none">
                 <button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
@@ -384,27 +385,28 @@
                         </svg>Main action</span>
                     </a>
                   </li>
-                  <li class="slds-dropdown__header slds-has-divider_top-space" role="separator">
-                    <span class="slds-text-title_caps">Menu header</span>
+                  <li class="slds-dropdown__header slds-has-divider_top-space" role="presentation">
+                    <span class="slds-text-title_caps">Galigeo Admin</span>
                   </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                      <span class="slds-truncate" title="Menu Item One">Contacts</span>
+                      <span class="slds-truncate" title="Menu Item One">Analytics</span>
                     </a>
                   </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                      <span class="slds-truncate" title="Menu Item Two">Files</span>
+                      <span class="slds-truncate" title="Menu Item Two">Dashboards</span>
                     </a>
                   </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                      <span class="slds-truncate" title="Menu Item Three">Chat</span>
+                      <span class="slds-truncate" title="Menu Item Three">...</span>
                     </a>
                   </li>
                 </ul>
               </div>
-            </li>            
+            </li>
+            -->          
           </ul>
         </nav>
       </div>
@@ -418,5 +420,23 @@
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
+  <script src="/scripts/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+  <script src='/scripts/vendor/mapbox/V3.1.1/mapbox.js'></script>
+
+  <script src="/scripts/ggo/g4sfdc.js"></script>
+  <script src="/scripts/ggo/mapmanager.js"></script>
+  <script src="/scripts/ggo/ggoapp.js"></script>
+
+  <script>
+  var self = this;
+  $(document).ready(function(e) {
+    console.log('>> document is ready');
+    var appOptions = {
+      mapDivId : 'mapDiv'
+    };
+    this.ggoApp = new G4SFDC.GGOApp(appOptions);
+  });
+  </script>
 </body>
 </html>
